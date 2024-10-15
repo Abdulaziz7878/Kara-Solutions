@@ -1,0 +1,31 @@
+version: 2
+sources:
+  - name: public
+    schema: public
+    tables:
+      - name: channel_messages
+
+models:
+  - name: medical_transformed_data
+    description: "medical data transformed"
+    columns:
+      - name: id
+        description: "Id number"
+        data_tests:
+          - not_null
+      - name: channel_title
+        description: "The title of the channel"
+        data_tests:
+          - not_null
+      - name: channel_username
+        description: "The username of the channel"
+        data_tests:
+          - not_null
+      - name: message
+        description: "message in the table"
+        data_tests:
+          - not_null
+      - name: date
+        description: "The date for the message"
+        data_tests:
+          - not_null
